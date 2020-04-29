@@ -15,15 +15,6 @@ nbproject/private
 .vscode/
 .vs/
 
-// Node / Bower
-node_modules/
-bower_components/
-
-// Plugins
-/plugins/*/*.md
-/plugins/*/*.html
-/plugins/*/package.json
-
 
 // Docs
 Gemfile.lock
