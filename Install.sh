@@ -22,6 +22,10 @@ IPCONN="$IP -u$DBUSER -p$DBPASS"
 SCRIPTPATH="/"
 
 function rodarMysql() {
+    sudo apt-get install mysql-server
+    sudo apt-get install php-mysql
     echo "Rodando Script MySQL..."
     mysql $CONN smart_house < /smart_house/sql/ScriptSQL.sql
 }
+
+rodarMysql
