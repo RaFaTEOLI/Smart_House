@@ -127,29 +127,14 @@
             </ul>
           </li>
         <?php } ?>
-        <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
+        <!-- <li class="nav-item">
+          <a href="/smart_house/pages/graficos/graficos.php" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Gráficos
-              <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="pages/charts/chartjs.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Nome do Gráfico</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/charts/flot.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Nome do Gráfico 2</p>
-              </a>
-            </li>
-          </ul>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
