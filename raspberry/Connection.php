@@ -14,7 +14,7 @@ class Connection {
 
   public function getCommand($program) {
     $path = $this->getPath();
-    return $path . $program;
+    return 'python -u ' . $path . $program;
   }
 
   public function getPath() {
