@@ -112,6 +112,7 @@ CREATE TABLE aparelho (
 	comodoId INT(10) NOT NULL,
 	nome VARCHAR(35) NOT NULL,
 	descricao VARCHAR(35),
+  port VARCHAR(35) NULL,
 	consumo DOUBLE NOT NULL DEFAULT '0',
 	status BOOLEAN NOT NULL DEFAULT '0',
 	FOREIGN KEY (comodoId) REFERENCES comodo(comodoId) ON DELETE CASCADE,

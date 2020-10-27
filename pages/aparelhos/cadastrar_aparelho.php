@@ -142,6 +142,12 @@
                       </select>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="port">Porta *</label>
+                        <input type="text" name="port" class="form-control" id="port" placeholder="Digite a porta">
+                    </div>
+                  </div>
                   <?php if (isset($_GET["comodoId"])) { ?>
                       <input type="hidden" name="comodoId" value="<?= $_GET["comodoId"] ?>">
                   <?php } ?>

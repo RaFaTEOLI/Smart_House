@@ -94,11 +94,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Casa</h1>
+            <h1 class="m-0 text-dark">Aparelho</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Casas</a></li>
+              <li class="breadcrumb-item"><a href="#">Aparelhos</a></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -154,6 +154,12 @@
                           }
                       ?>
                       </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="port">Porta *</label>
+                        <input type="text" name="port" class="form-control" id="port" placeholder="Digite a porta" value="<?= $aparelho["port"] ?>">
                     </div>
                   </div>
                   <input type="hidden" name="aparelhoId" value="<?= $aparelho["aparelhoId"] ?>">

@@ -1,6 +1,8 @@
 <?php
-
 require_once("DaoLog.php");
+
+require_once("../../root.php");
+require_once($root . "/raspberry/Connection.php");
 
 class DaoAparelho
 {
@@ -72,9 +74,10 @@ class DaoAparelho
         $nome = utf8_decode($conn->real_escape_string($aparelho["nome"]));
         $descricao = $conn->real_escape_string($aparelho["descricao"]);
         $comodoId = $conn->real_escape_string($aparelho["comodo"]);
+        $port = $conn->real_escape_string($aparelho["port"]);
 
-        $salvarAparelho = "INSERT INTO aparelho (nome, descricao, comodoId) VALUES
-        ('{$nome}', '{$descricao}', '{$comodoId}')";
+        $salvarAparelho = "INSERT INTO aparelho (nome, descricao, comodoId, port) VALUES
+        ('{$nome}', '{$descricao}', '{$comodoId}', '{$port}')";
 
         $query = mysqli_query($conn, $salvarAparelho);
 
@@ -100,9 +103,10 @@ class DaoAparelho
         $comodoId = $conn->real_escape_string($aparelho["comodo"]);
         $nome = utf8_decode($conn->real_escape_string($aparelho["nome"]));
         $descricao = $conn->real_escape_string($aparelho["descricao"]);
+        $port = $conn->real_escape_string($aparelho["port"]);
 
         $salvarComodo = "UPDATE aparelho ";
-        $salvarComodo .= "SET nome = '{$nome}', descricao = '{$descricao}' ";
+        $salvarComodo .= "SET nome = '{$nome}', descricao = '{$descricao}', port = '{$port}' ";
         $salvarComodo .= "SET comodoId = '{$comodoId}' ";
         $salvarComodo .= "WHERE aparelhoId = '{$aparelhoId}'";
 
@@ -152,6 +156,8 @@ class DaoAparelho
 
     function ativarOuDesativarAparelho($conn, $aparelho, $statusAtual, $rotina = null)
     {
+        $connection = new Connection();
+
         if ($rotina == null) {
             $daoAtivacao = new DaoAtivacao();
         }
@@ -165,6 +171,11 @@ class DaoAparelho
         }
 
         $dados = $this->getAparelho($conn, $aparelho);
+
+        $value = ($novoStatus == 1) ? true : false;
+        if ($dados["port"] > 0) {
+          $connection->send($dados["port"], $value);
+        }
 
         $sql = "UPDATE aparelho SET status = {$novoStatus} WHERE aparelhoId = {$aparelho}";
         $query = mysqli_query($conn, $sql);
