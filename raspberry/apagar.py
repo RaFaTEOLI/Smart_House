@@ -3,13 +3,13 @@ import RPi.GPIO as GPIO
 import time 
 import sys 
 import os 
+porta = int(sys.argv[1]) 
 GPIO.setmode(GPIO.BOARD) 
 GPIO.setwarnings(False) 
-GPIO.setup(sys.argv[1], GPIO.OUT) 
-rele_sala = sys.argv[1]
+GPIO.setup(porta, GPIO.OUT) 
  
 def desligar(): 
-    GPIO.output(rele_sala, GPIO.LOW) 
+    GPIO.output(porta, GPIO.LOW) 
  
 if __name__ == "__main__": 
     desligar()

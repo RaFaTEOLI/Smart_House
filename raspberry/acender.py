@@ -1,14 +1,14 @@
 import RPi.GPIO as GPIO 
 import time 
 import sys 
-import os 
+import os
+porta = int(sys.argv[1]) 
 GPIO.setmode(GPIO.BOARD) 
 GPIO.setwarnings(False) 
-GPIO.setup(sys.argv[1], GPIO.OUT) 
-rele_sala = sys.argv[1]
+GPIO.setup(porta, GPIO.OUT) 
 
 def ligar(): 
-    GPIO.output(rele_sala, GPIO.HIGH) 
+    GPIO.output(porta, GPIO.HIGH) 
 
 if __name__ == "__main__": 
     ligar()

@@ -1,8 +1,7 @@
 <?php
-
+require_once("../../root.php");
 class Connection {
   public function send($port, $value = true) {
-
     echo $this->saveLog('Chamando o raspberry...');
     if ($value) {
       echo $this->saveLog('Ligando porta ' . $port);
@@ -14,14 +13,19 @@ class Connection {
   }
 
   public function getCommand($program) {
-    $path = "C:\\xampp\htdocs\smart_house\\raspberry\\";
+    $path = $this->getPath();
     return $path . $program;
+  }
+
+  public function getPath() {
+    global $root;
+    return $root . DIRECTORY_SEPARATOR . 'raspberry' . DIRECTORY_SEPARATOR;
   }
 
 
   public function saveLog($message) {
     $message = $this->actionLog($message);
-    shell_exec('echo ' . $message . ' >> C:\xampp\htdocs\smart_house\raspberry\log.txt');
+    shell_exec('echo ' . $message . ' >> ' . $this->getPath() . 'log.txt');
   }
 
   public function actionLog($message) {
