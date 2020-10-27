@@ -86,9 +86,9 @@
         </div>
       </form>
       <br>
-      <p class="mb-1">
+      <!-- <p class="mb-1">
         <a href="/smart_house/pages/login/esqueci_senha.php">Esqueci minha senha</a>
-      </p>
+      </p> -->
       <p class="mb-0">
         <a href="/smart_house/pages/login/cadastrar.php" class="text-center">Quero me cadastrar</a>
       </p>
