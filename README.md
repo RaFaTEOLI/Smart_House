@@ -6,10 +6,13 @@ Smart House is a project for college, where you can turn on and off devices in y
 ## 🤹‍ Our Team
 
 - **[Rafael Tessarolo](https://github.com/RaFaTEOLI)**
+- **[Vitor Gabriel](https://github.com/vtrgabriel)**
+- **[Gabriel Barbosa](https://github.com/NemesisLink)**
+- **[Gabriel Rodrigues](https://github.com/gaguinhosantos)**
 
 ## 📄 License
 
-The Class Attendance app is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Smart House app is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## ⚙ How to Install
 
