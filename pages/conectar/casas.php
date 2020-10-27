@@ -51,7 +51,10 @@
     <div class="container-fluid card-body">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-
+        <?php if ($casas->num_rows == 0) {
+          echo 'Você não possui nenhuma casa'; 
+        }
+        ?>
         <?php while($linha = mysqli_fetch_assoc($casas)) { ?>
         <div class="col-lg-3 col-6">
           <!-- small box -->

@@ -20,7 +20,7 @@ class DaoCasa {
 
     function getCasas($conn, $pessoaId) {
         $sql = "SELECT DISTINCT c.*, p.nome AS dono FROM casa c
-        INNER JOIN morador m
+        LEFT JOIN morador m
         ON c.casaId = m.casaId
         INNER JOIN pessoa p
         ON p.pessoaId = c.proprietarioId ";

@@ -5,7 +5,7 @@ require_once("DaoLog.php");
 class DaoPessoa {
     
     function getCountPessoas($conn, $casaId) {
-        $sql = "SELECT COUNT(*) AS pessoas FROM pessoa";
+        $sql = "SELECT COUNT(*) AS pessoas FROM pessoa WHERE statusId = 1";
 
         $query = mysqli_query($conn, $sql);
 
@@ -21,7 +21,7 @@ class DaoPessoa {
     function existeUsuario($conn, $pessoa) {
         $usuario = $conn->real_escape_string($pessoa["usuario"]);
 
-        $sql = "SELECT COUNT(*) AS existe FROM pessoa WHERE usuario = '{$usuario}' LIMIT 1";
+        $sql = "SELECT COUNT(*) AS existe FROM pessoa WHERE usuario = '{$usuario}' AND statusId = 1 LIMIT 1";
 
         $query = mysqli_query($conn, $sql);
 
@@ -66,13 +66,15 @@ class DaoPessoa {
             die("Falha na consulta!" . mysqli_error($conn));
         }
 
-        $daoLog = new DaoLog();
-        $log = [
-            "acao" => "Inserir",
-            "descricao" => $_SESSION["userNome"] . " inseriu uma pessoa, ID: " . mysqli_insert_id($conn),
-        ];
+        if (isset($_SESSION["userNome"])) {
+          $daoLog = new DaoLog();
+          $log = [
+              "acao" => "Inserir",
+              "descricao" => $_SESSION["userNome"] . " inseriu uma pessoa, ID: " . mysqli_insert_id($conn),
+          ];
 
-        $daoLog->salvarLog($conn, $log);
+          $daoLog->salvarLog($conn, $log);
+        }
 
         return true;
     }
@@ -157,7 +159,7 @@ class DaoPessoa {
     }
 
     function getPessoas($conn) {
-        $sql = "SELECT * FROM pessoa";
+        $sql = "SELECT * FROM pessoa WHERE statusId = 1";
 
         $query = mysqli_query($conn, $sql);
 

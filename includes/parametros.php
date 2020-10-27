@@ -63,7 +63,7 @@
         $usuario = $conn->real_escape_string($usuario);
         $senha = $conn->real_escape_string($senha);
 
-        $login_sql = "SELECT * FROM pessoa WHERE usuario = '{$usuario}' AND senha = MD5('{$senha}') LIMIT 1";
+        $login_sql = "SELECT * FROM pessoa WHERE usuario = '{$usuario}' AND senha = MD5('{$senha}') AND statusId = 1 LIMIT 1";
 
         $login_query = mysqli_query($conn, $login_sql);
 
