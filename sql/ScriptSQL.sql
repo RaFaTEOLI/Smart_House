@@ -32,7 +32,7 @@ CREATE TABLE pessoa (
 	PRIMARY KEY (pessoaId)
 );
 
-INSERT INTO pessoa (nome, sobrenome, email, usuario, senha, nivel, admin, notifyEmail, statusId) VALUES ('Rafael', 'Tessarolo', 'rafinha.tessarolo@hotmail.com', 'rafael', MD5('1234'), 10, true, true, 1);
+INSERT INTO pessoa (nome, sobrenome, email, usuario, senha, nivel, admin, notifyEmail, statusId) VALUES ('Admin', 'Smart House', 'admin@smarthouse.com', 'admin', MD5('1234'), 10, true, true, 1);
 
 CREATE TABLE estado (
 	estadoId INT(10) NOT NULL AUTO_INCREMENT,
