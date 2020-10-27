@@ -119,7 +119,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <form role="form" id="quickForm" action="alterar_comodo.php" method="POST" enctype="multipart/form-data">
+              <form role="form" id="quickForm" action="alterar_aparelho.php" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="row">
                     <div class="form-group col-md-6">
@@ -137,7 +137,7 @@
                       <select class="form-control select2" name="comodo">
                         <option value="">Selecione um cômodo</option>
                         <?php
-                          while($comodo = mysqli_fetch_assoc($comodos)){
+                          while($comodo = mysqli_fetch_assoc($comodos)) {
                             if ($comodo["comodoId"] == $aparelho["comodoId"]) {
                             ?>
                             <option value="<?php echo $comodo["comodoId"] ?>" selected>
