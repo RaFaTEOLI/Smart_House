@@ -106,8 +106,8 @@ class DaoAparelho
         $port = $conn->real_escape_string($aparelho["port"]);
 
         $salvarComodo = "UPDATE aparelho ";
-        $salvarComodo .= "SET nome = '{$nome}', descricao = '{$descricao}', port = '{$port}' ";
-        $salvarComodo .= "SET comodoId = '{$comodoId}' ";
+        $salvarComodo .= "SET nome = '{$nome}', descricao = '{$descricao}', port = '{$port}', ";
+        $salvarComodo .= "comodoId = '{$comodoId}' ";
         $salvarComodo .= "WHERE aparelhoId = '{$aparelhoId}'";
 
         $query = mysqli_query($conn, $salvarComodo);
