@@ -312,8 +312,6 @@ function getCorpoReprovacao($nome) {
                                                             <div class="contentEditableContainer contentTextEditable">
                                                                 <div class="contentEditable" style="font-size:13px;color:#555555;font-weight:normal;">
                                                                     <p> Seu cadastro foi reprovado!</p><br>
-                                                                    <!--<p>Você já pode acessar o sistema pelo seu navegador.</p><br>
-                                                                    <h3>Endereço para acesso: <a href="http://localhost/" >Smart House</a></h3>-->
                                                                 </div>
                                                             </div>
                                                         </td>
