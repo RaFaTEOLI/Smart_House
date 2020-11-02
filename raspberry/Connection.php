@@ -14,7 +14,7 @@ class Connection {
 
   public function getCommand($program) {
     $path = $this->getPath();
-    return 'python -u ' . $path . $program;
+    return 'sudo python ' . $path . $program;
   }
 
   public function getPath() {
