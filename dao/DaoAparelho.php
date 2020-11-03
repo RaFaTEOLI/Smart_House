@@ -154,12 +154,17 @@ class DaoAparelho
         }
     }
 
-    function ativarOuDesativarAparelho($conn, $aparelho, $statusAtual, $rotina = null)
+    function ativarOuDesativarAparelho($conn, $aparelho, $statusAtual = null, $rotina = null)
     {
         $connection = new Connection();
 
         if ($rotina == null) {
             $daoAtivacao = new DaoAtivacao();
+        }
+
+        $dados = $this->getAparelho($conn, $aparelho);
+        if ($statusAtual == null) {
+          $statusAtual = $dados["status"];
         }
 
         if ($statusAtual == 0) {
@@ -169,8 +174,6 @@ class DaoAparelho
             $novoStatus = 0;
             $acaoStatus = "desligou";
         }
-
-        $dados = $this->getAparelho($conn, $aparelho);
 
         $value = ($novoStatus == 1) ? true : false;
         if ($dados["port"] > 0) {
