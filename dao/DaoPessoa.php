@@ -38,7 +38,7 @@ class DaoPessoa {
         }
     }
 
-    function salvarPessoa($conn, $pessoa, $foto = null) {
+    function salvarPessoa($conn, $pessoa, $foto = null, $statusId = 2) {
         $nome = utf8_decode($conn->real_escape_string($pessoa["nome"]));
         $sobrenome = utf8_decode($conn->real_escape_string($pessoa["sobrenome"]));
         $email = $conn->real_escape_string($pessoa["email"]);
@@ -57,8 +57,8 @@ class DaoPessoa {
             $notifyEmail = 1;
         }
         
-        $salvarPessoa = "INSERT INTO pessoa (nome, sobrenome, email, usuario, senha, admin, notifyEmail, foto) VALUES
-        ('{$nome}', '{$sobrenome}', '{$email}', '{$usuario}', MD5('{$senha}'), '{$admin}', '{$notifyEmail}', '{$foto}')";
+        $salvarPessoa = "INSERT INTO pessoa (nome, sobrenome, email, usuario, senha, admin, notifyEmail, foto, statusId) VALUES
+        ('{$nome}', '{$sobrenome}', '{$email}', '{$usuario}', MD5('{$senha}'), '{$admin}', '{$notifyEmail}', '{$foto}', '{$statusId}')";
 
         $query = mysqli_query($conn, $salvarPessoa);
 
