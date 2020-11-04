@@ -2,7 +2,6 @@
   require_once("../../root.php");
   require_once($root . "/includes/parametros.php");
   require_once($root . "/includes/conexao/conn.php");
-  require_once($root . "/email/Email.php");
   require_once($root . "/email/aprovacao.php");
   require_once($root . "/email/reprovacao.php");
 
@@ -28,11 +27,12 @@
         "corpo" => getCorpoAprovacao($pessoa["nome"] . " " . $pessoa["sobrenome"])
       );
 
-      if (enviarEmail($array_email)) {
-          header("Location: /pages/gerenciamento/pedidos_ativacao.php?aprovar=true");
-      } else {
-          header("Location: /pages/error/500.php?erro=" . "Email Não Enviado!");
-      }
+      header("Location: /pages/gerenciamento/pedidos_ativacao.php?aprovar=true");
+      // if (enviarEmail($array_email)) {
+      //     header("Location: /pages/gerenciamento/pedidos_ativacao.php?aprovar=true");
+      // } else {
+      //     header("Location: /pages/error/500.php?erro=" . "Email Não Enviado!");
+      // }
     }
   } else if (isset($_GET["reprovar"])) {
     if ($daoPessoa->setStatusUsuario($conn, $_GET["reprovar"], 3)) {
@@ -46,11 +46,12 @@
         "corpo" => getCorpoReprovacao($pessoa["nome"] . " " . $pessoa["sobrenome"], false)
       );
 
-      if (enviarEmail($array_email)) {
-          header("Location: /pages/gerenciamento/pedidos_ativacao.php?reprovar=true");
-      } else {
-          header("Location: /pages/error/500.php?erro=" . "Email Não Enviado!");
-      }
+      header("Location: /pages/gerenciamento/pedidos_ativacao.php?reprovar=true");
+      // if (enviarEmail($array_email)) {
+      //     header("Location: /pages/gerenciamento/pedidos_ativacao.php?reprovar=true");
+      // } else {
+      //     header("Location: /pages/error/500.php?erro=" . "Email Não Enviado!");
+      // }
       
     }
   }

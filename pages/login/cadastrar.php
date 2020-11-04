@@ -2,7 +2,7 @@
   require_once("../../root.php");
   require_once($root . "/includes/parametros.php");
   require_once($root . "/includes/conexao/conn.php");
-  require_once($root . "/email/Email.php");
+  
 
   include($root . "/dao/DaoPessoa.php");
   
@@ -19,11 +19,12 @@
           array_push($array_email, $array_email["assunto"] = "Cadastro Enviado!");
           array_push($array_email, $array_email["corpo"] = "Enviado");
 
-          if (enviarEmail($array_email)) {
-              header("Location: /pages/login/cadastro_enviado.php?email=true");
-          } else {
-              header("Location: /pages/login/cadastro_enviado.php?email=false");
-          }
+          header("Location: /pages/login/cadastro_enviado.php?email=true");
+          // if (enviarEmail($array_email)) {
+          //     header("Location: /pages/login/cadastro_enviado.php?email=true");
+          // } else {
+          //     header("Location: /pages/login/cadastro_enviado.php?email=false");
+          // }
         } else {
             header("Location: /pages/error/500.php");
         }
