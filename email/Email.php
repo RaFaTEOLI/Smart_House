@@ -1,6 +1,7 @@
 <?php   
+    require_once("../../root.php");
     // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
-    require_once("PHPMailer/PHPMailerAutoLoad.php");
+    require_once($root . "/email/PHPMailer/PHPMailerAutoLoad.php");
 
     // Inicia a classe PHPMailer 
     $mail = new PHPMailer(); 
