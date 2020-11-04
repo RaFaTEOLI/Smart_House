@@ -10,7 +10,7 @@
     
     function testSession() {
         if (!isset($_SESSION["userId"])) {
-            header("Location: /smart_house/login.php");
+            header("Location: login.php");
         }
     }
 
