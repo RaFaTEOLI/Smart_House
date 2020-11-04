@@ -1,5 +1,5 @@
 <?php
-// * * * * * php /var/www/html/smart_house/pages/rotinas/rotina-cron.php >> rotina-cron.log
+// * * * * * php /var/www/html/pages/rotinas/rotina-cron.php >> rotina-cron.log
 require_once("../../root.php");
 require_once($root . "/includes/conexao/conn.php");
 

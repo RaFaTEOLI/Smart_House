@@ -29,9 +29,9 @@
       );
 
       if (enviarEmail($array_email)) {
-          header("Location: /smart_house/pages/gerenciamento/pedidos_ativacao.php?aprovar=true");
+          header("Location: /pages/gerenciamento/pedidos_ativacao.php?aprovar=true");
       } else {
-          header("Location: /smart_house/pages/error/500.php?erro=" . "Email Não Enviado!");
+          header("Location: /pages/error/500.php?erro=" . "Email Não Enviado!");
       }
     }
   } else if (isset($_GET["reprovar"])) {
@@ -47,9 +47,9 @@
       );
 
       if (enviarEmail($array_email)) {
-          header("Location: /smart_house/pages/gerenciamento/pedidos_ativacao.php?reprovar=true");
+          header("Location: /pages/gerenciamento/pedidos_ativacao.php?reprovar=true");
       } else {
-          header("Location: /smart_house/pages/error/500.php?erro=" . "Email Não Enviado!");
+          header("Location: /pages/error/500.php?erro=" . "Email Não Enviado!");
       }
       
     }

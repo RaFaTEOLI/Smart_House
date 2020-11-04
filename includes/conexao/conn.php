@@ -17,9 +17,9 @@
 
 function getErroBD($erro) {
     if ($_SESSION["NIVEL"] == 99) {
-        header("Location: /smart_house/pages/dashboard/erro/erro_bd.php?erro=" . $erro);
+        header("Location: /pages/dashboard/erro/erro_bd.php?erro=" . $erro);
     } else {
-        header("Location: /smart_house/pages/dashboard/erro/erro_bd.php");
+        header("Location: /pages/dashboard/erro/erro_bd.php");
     }
     die();
 }

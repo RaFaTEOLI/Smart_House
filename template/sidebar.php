@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="/smart_house/pages/conectar/casas.php" class="brand-link">
-    <img src="/smart_house/dist/img/smarthouselogo.png" alt="Smart House Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+  <a href="/pages/conectar/casas.php" class="brand-link">
+    <img src="/dist/img/smarthouselogo.png" alt="Smart House Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-light">Smart House</span>
   </a>
 
@@ -10,12 +10,12 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="<?php echo $_SESSION["userFoto"] ? $_SESSION["userFoto"] : "/smart_house/dist/img/avatar5.png" ?>" class="img-circle elevation-2" alt="User Image">
+        <img src="<?php echo $_SESSION["userFoto"] ? $_SESSION["userFoto"] : "/dist/img/avatar5.png" ?>" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
         <div class="d-block">
           <a href="#"><?php echo $_SESSION["userNome"] ?></a>
-          <a href="/smart_house/pages/logout/logout.php" style="padding-left: 100px"><i class="fas fa-sign-out-alt"></i></a>
+          <a href="/pages/logout/logout.php" style="padding-left: 100px"><i class="fas fa-sign-out-alt"></i></a>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/moradores/moradores.php" class="nav-link">
+          <a href="/pages/moradores/moradores.php" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
             <p>
               Moradores
@@ -43,7 +43,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/comodos/comodos.php" class="nav-link">
+          <a href="/pages/comodos/comodos.php" class="nav-link">
             <i class="nav-icon fas fa-door-open"></i>
             <p>
               Cômodos
@@ -51,7 +51,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/aparelhos/aparelhos.php" class="nav-link">
+          <a href="/pages/aparelhos/aparelhos.php" class="nav-link">
             <i class="nav-icon fas fa-mobile"></i>
             <p>
               Aparelhos
@@ -59,7 +59,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/cenas/cenas.php" class="nav-link">
+          <a href="/pages/cenas/cenas.php" class="nav-link">
             <i class="nav-icon fas fa-person-booth"></i>
             <p>
               Cenas
@@ -67,7 +67,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/rotinas/rotinas.php" class="nav-link">
+          <a href="/pages/rotinas/rotinas.php" class="nav-link">
             <i class="nav-icon fas fa-clock"></i>
             <p>
               Rotinas
@@ -75,7 +75,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/ativacoes/ativacoes.php" class="nav-link">
+          <a href="/pages/ativacoes/ativacoes.php" class="nav-link">
             <i class="nav-icon fas fa-toggle-on"></i>
             <p>
               Ativações
@@ -83,7 +83,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/smart_house/pages/relatorios/relatorios.php" class="nav-link">
+          <a href="/pages/relatorios/relatorios.php" class="nav-link">
             <i class="nav-icon fas fa-file"></i>
             <p>
               Relatórios
@@ -101,25 +101,25 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/smart_house/pages/usuarios/usuarios.php" class="nav-link">
+                <a href="/pages/usuarios/usuarios.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Usuários</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/smart_house/pages/casas/casas.php" class="nav-link">
+                <a href="/pages/casas/casas.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Casas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/smart_house/pages/logs_sistema/logs_sistema.php" class="nav-link">
+                <a href="/pages/logs_sistema/logs_sistema.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Logs do Sistema</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/smart_house/pages/gerenciamento/pedidos_ativacao.php" class="nav-link">
+                <a href="/pages/gerenciamento/pedidos_ativacao.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pedidos de Ativação</p>
                 </a>
@@ -128,7 +128,7 @@
           </li>
         <?php } ?>
         <!-- <li class="nav-item">
-          <a href="/smart_house/pages/graficos/graficos.php" class="nav-link">
+          <a href="/pages/graficos/graficos.php" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Gráficos

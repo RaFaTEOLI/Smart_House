@@ -2,7 +2,7 @@
     session_start();
     $titulo = "Smart House";
     $nomeMenu = "Smart House";    
-    $favicon = "/smart_house/dist/img/favicon.ico";
+    $favicon = "/dist/img/favicon.ico";
     $botao_alterar = "btn btn-success btn-sm";
     $botao_cancelar = "btn btn-info btn-sm";
     $botao_excluir = "btn btn-danger btn-sm";
@@ -16,18 +16,18 @@
 
     function testHouseSession() {
         if (!isset($_SESSION["casaId"])) {
-            header("Location: /smart_house/pages/conectar/casas.php");
+            header("Location: /pages/conectar/casas.php");
         }
     }
 
     function testAdmin() {
         if(!$_SESSION["userAdmin"]) {
-            header("Location: /smart_house/pages/error/403.php");
+            header("Location: /pages/error/403.php");
         }
     }
 
     function getErro($erro) {
-        header("Location: /smart_house/pages/error/error.php?erro=" . $erro);
+        header("Location: /pages/error/error.php?erro=" . $erro);
         die();
     }
 

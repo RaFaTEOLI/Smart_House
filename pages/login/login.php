@@ -5,7 +5,7 @@
 
   if (isset($_POST["usuario"]) && isset($_POST["senha"])) {
       if (autenticarUsuario($conn, $_POST["usuario"], $_POST["senha"])) {
-          header("Location: /smart_house/pages/conectar/casas.php");
+          header("Location: /pages/conectar/casas.php");
       } else {
           $mensagem = "Usuário ou Senha Incorretos!";
       }
@@ -23,13 +23,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/smart_house/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="/smart_house/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/smart_house/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -43,7 +43,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Faça login para iniciar sua sessão</p>
 
-      <form action="/smart_house/pages/login/login.php" method="post">
+      <form action="/pages/login/login.php" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="usuario" placeholder="Usuário">
           <div class="input-group-append">
@@ -87,10 +87,10 @@
       </form>
       <br>
       <!-- <p class="mb-1">
-        <a href="/smart_house/pages/login/esqueci_senha.php">Esqueci minha senha</a>
+        <a href="/pages/login/esqueci_senha.php">Esqueci minha senha</a>
       </p> -->
       <p class="mb-0">
-        <a href="/smart_house/pages/login/cadastrar.php" class="text-center">Quero me cadastrar</a>
+        <a href="/pages/login/cadastrar.php" class="text-center">Quero me cadastrar</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -99,11 +99,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="/smart_house/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="/smart_house/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/smart_house/dist/js/adminlte.min.js"></script>
+<script src="/dist/js/adminlte.min.js"></script>
 
 </body>
 </html>

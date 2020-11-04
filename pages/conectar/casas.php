@@ -71,7 +71,7 @@
         </div>
         <?php } ?>
       </div>
-      <form action="/smart_house/pages/conectar/casas.php" method="POST" id="casaForm"style="display: none;">
+      <form action="/pages/conectar/casas.php" method="POST" id="casaForm"style="display: none;">
         <input type="hidden" name="casaId" id="campoCasa">
       </form>
     </div><!-- /.container-fluid -->

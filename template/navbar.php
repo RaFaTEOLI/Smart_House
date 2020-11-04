@@ -44,7 +44,7 @@ $mensagens = $daoMensagem->getMensagens($conn, $_SESSION["casaId"]);
                     </a>
                 <?php } ?>
                 <div class="dropdown-divider"></div>
-                <a href="/smart_house/pages/mensagens/mensagens.php" class="dropdown-item dropdown-footer">Ver Todas</a>
+                <a href="/pages/mensagens/mensagens.php" class="dropdown-item dropdown-footer">Ver Todas</a>
             </div>
         </li>
         <!-- Notifications Dropdown Menu -->
