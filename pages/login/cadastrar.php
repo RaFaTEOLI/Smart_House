@@ -122,7 +122,7 @@
         </div>
       </form>
 
-      <a href="/smart_house/login.php" class="text-center">Já tenho conta</a>
+      <a href="/pages/login/login.php" class="text-center">Já tenho conta</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

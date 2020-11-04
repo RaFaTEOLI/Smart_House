@@ -5,5 +5,5 @@
     unset($_SESSION["userNivel"]);
     unset($_SESSION["userAdmin"]);
     unset($_SESSION["userFoto"]);
-    header("Location: /smart_house/login.php");
+    header("Location: /pages/login/login.php");
 ?>
