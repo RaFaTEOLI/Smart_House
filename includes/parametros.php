@@ -16,7 +16,7 @@
 
     function testHouseSession() {
         if (!isset($_SESSION["userId"])) {
-          header("Location: login.php");
+          header("Location: /pages/login/login.php");
           exit;
         }
         if (!isset($_SESSION["casaId"])) {
