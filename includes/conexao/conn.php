@@ -1,9 +1,9 @@
 <?php
     // Connection Variables
-    $server = "localhost";    
+    $server = "smarthouse.cfwoqgakt7t7.us-east-2.rds.amazonaws.com";    
     $user = "smart_house";
     $password = "fIHad42gf";
-    $db = "smart_house";
+    $db = "smarthouse";
     $port = "3306";
 
     // Opens Connection
