@@ -74,7 +74,7 @@
       // if everything is ok, try to upload file
       } else {
           if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-              $caminho_foto = str_replace('../../', '/smart_house/', $target_file);
+              $caminho_foto = str_replace('../../', '', $target_file);
               echo "The file ". $basename_file . " has been uploaded on " . $caminho_foto;
 
               if($daoCasa->alterarCasa($conn, $_POST, $caminho_foto)) {
