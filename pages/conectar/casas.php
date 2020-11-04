@@ -13,7 +13,7 @@
   
   if (isset($_POST["casaId"])) {
       $_SESSION["casaId"] = $_POST["casaId"];
-      header("Location: /smart_house/");
+      header("Location: /");
   }
 
 ?>
