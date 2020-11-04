@@ -140,13 +140,13 @@ if (isset($_POST["aparelhoId"]) && isset($_POST["dataHora"])) {
                             if ($aparelho["aparelhoId"] == $rotina["aparelhoId"]) {
                           ?>
                               <option value="<?php echo $aparelho["aparelhoId"] ?>" selected>
-                                <?= utf8_encode($aparelho["aparelhoId"] . ' - ' . $aparelho["nome"]) ?>
+                                <?= $aparelho["aparelhoId"] . ' - ' . $aparelho["nome"] ?>
                               </option>
                             <?php
                             } else {
                             ?>
                               <option value="<?php echo $aparelho["aparelhoId"] ?>">
-                                <?= utf8_encode($aparelho["aparelhoId"] . ' - ' . $aparelho["nome"]) ?>
+                                <?= $aparelho["aparelhoId"] . ' - ' . $aparelho["nome"] ?>
                               </option>
                           <?php
                             }

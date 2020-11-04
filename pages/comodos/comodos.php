@@ -112,7 +112,7 @@
                       <div class="inner">
                         <a id="alterar" href="alterar_comodo.php?id=<?= $comodo["comodoId"] ?>" style="position:absolute; right:25px;top:5px;" class="text-warning"><i class="fas fa-edit"></i></a>
                         <a id="remover" href="excluir_comodo.php?id=<?= $comodo["comodoId"] ?>" style="position:absolute; right:5px;top:5px;" class="text-danger"><i class="fas fa-trash"></i></a>
-                        <h3><?= utf8_encode($comodo["nome"]) ?></h3>
+                        <h3><?= $comodo["nome"] ?></h3>
 
                         <p><?= "Andar: " . $comodo["andar"] ?></p>
                       </div>

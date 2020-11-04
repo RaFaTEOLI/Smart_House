@@ -36,7 +36,7 @@ $mensagens = $daoMensagem->getMensagens($conn, $_SESSION["casaId"]);
                                 <h3 class="dropdown-item-title">
                                     <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                 </h3>
-                                <p class="text-sm"><?= utf8_encode($mensagem["mensagem"]) ?></p>
+                                <p class="text-sm"><?= $mensagem["mensagem"] ?></p>
                                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i><?= date("d/m/Y H:i:s", strtotime($mensagem["dataMensagem"])) ?></p>
                             </div>
                         </div>

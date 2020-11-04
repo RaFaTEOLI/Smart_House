@@ -105,8 +105,8 @@
                 <tbody>
                 <?php while ($linha = mysqli_fetch_assoc($relatorios)) { ?>
                   <tr>
-                    <td><?= utf8_encode($linha["nome"]) ?></td>
-                    <td><?= utf8_encode($linha["descricao"]) ?></td>
+                    <td><?= $linha["nome"] ?></td>
+                    <td><?= $linha["descricao"] ?></td>
                     <td><?= date("d/m/Y", strtotime($linha["data_cadastro"])) ?></td>
                     <td align="center"><a type="button" href="relatorio.php?id=<?= $linha["relatorioId"] ?>" class="btn btn-primary"><i class="fas fa-eye"></i></a></td>
                   </tr>

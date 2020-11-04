@@ -162,7 +162,7 @@ $relatorioQuery = mysqli_fetch_assoc($daoRelatorio->runRelatorio($conn, $relator
               <!-- BAR CHART -->
               <div class="card card-success">
                 <div class="card-header">
-                  <h3 class="card-title"><?= utf8_encode($relatorio["nome"]) . ' - ' . utf8_encode($relatorio["descricao"]) ?></h3>
+                  <h3 class="card-title"><?= $relatorio["nome"] . ' - ' . $relatorio["descricao"] ?></h3>
 
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>

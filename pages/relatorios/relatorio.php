@@ -104,17 +104,17 @@ $linhas = $relatorioQuery->num_rows;
         <div class="card">
           <div class="card-header">
             <div class="d-flex justify-content-between">
-              <h3 class="card-title"><?= utf8_encode($relatorio["nome"]) ?></h3>
+              <h3 class="card-title"><?= $relatorio["nome"] ?></h3>
               <a type="button" href="relatorios.php" class="btn btn-secondary btn-sm"><i class="fas fa-undo"></i></a>
             </div>
           </div>
           <div class="card-body">
-            <strong>Descrição: </strong><?= utf8_encode($relatorio["descricao"]) ?><br><br>
+            <strong>Descrição: </strong><?= $relatorio["descricao"] ?><br><br>
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
                   <?php foreach ($fields as $field) { ?>
-                    <th scope="col"><?= utf8_encode($field->name) ?></th>
+                    <th scope="col"><?= $field->name ?></th>
                   <?php } ?>
                 </tr>
               </thead>
@@ -122,7 +122,7 @@ $linhas = $relatorioQuery->num_rows;
                 <?php while ($row = mysqli_fetch_array($relatorioQuery)) { ?>
                   <tr>
                     <?php for ($c = 0; $c < $colunas; $c++) { ?>
-                      <td><?= utf8_encode($row[$c]) ?></td>
+                      <td><?= $row[$c] ?></td>
                     <?php } ?>
                   </tr>
                 <?php } ?>

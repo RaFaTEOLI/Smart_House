@@ -72,7 +72,7 @@ class DaoCena
     function salvarCena($conn, $cena)
     {
         $nome = $conn->real_escape_string($cena["nome"]);
-        $descricao = utf8_decode($conn->real_escape_string($cena["descricao"]));
+        $descricao = $conn->real_escape_string($cena["descricao"]);
         $dataHora = $this->dateBRtoUSA($conn->real_escape_string($cena["dataHora"]));
 
         $salvarCena = "INSERT INTO cenas (nome, descricao, dataHora) VALUES
@@ -101,7 +101,7 @@ class DaoCena
     {
         $cenaId = $conn->real_escape_string($cena["id"]);
         $nome = $conn->real_escape_string($cena["nome"]);
-        $descricao = utf8_decode($conn->real_escape_string($cena["descricao"]));
+        $descricao = $conn->real_escape_string($cena["descricao"]);
         $dataHora = $this->dateBRtoUSA($conn->real_escape_string($cena["dataHora"]));
 
         $salvarCena = "UPDATE cenas ";

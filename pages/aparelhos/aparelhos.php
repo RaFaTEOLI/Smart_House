@@ -123,7 +123,7 @@
                         <a id="ativar" href="ativar_aparelho.php?id=<?= $aparelho["aparelhoId"] ?>" style="position:absolute; right:60px;top:5px; font-size: 18px;" class="text-primary"><i class="fas fa-power-off"></i></a>
                         <a id="alterar" href="alterar_aparelho.php?id=<?= $aparelho["aparelhoId"] ?>" style="position:absolute; right:30px;top:5px; font-size: 18px;" class="text-warning"><i class="fas fa-edit"></i></a>
                         <a id="remover" href="excluir_aparelho.php?id=<?= $aparelho["aparelhoId"] ?>" style="position:absolute; right:5px;top:5px; font-size: 18px;" class="text-danger"><i class="fas fa-trash"></i></a>
-                        <h3><?= utf8_encode($aparelho["nome"]) ?></h3>
+                        <h3><?= $aparelho["nome"] ?></h3>
 
                         <p><?= $aparelho["comodoNome"] ?></p>
                       </div>

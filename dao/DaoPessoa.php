@@ -39,8 +39,8 @@ class DaoPessoa {
     }
 
     function salvarPessoa($conn, $pessoa, $foto = null, $statusId = 2) {
-        $nome = utf8_decode($conn->real_escape_string($pessoa["nome"]));
-        $sobrenome = utf8_decode($conn->real_escape_string($pessoa["sobrenome"]));
+        $nome = $conn->real_escape_string($pessoa["nome"]);
+        $sobrenome = $conn->real_escape_string($pessoa["sobrenome"]);
         $email = $conn->real_escape_string($pessoa["email"]);
         $usuario = $conn->real_escape_string($pessoa["usuario"]);
         $senha = $conn->real_escape_string($pessoa["senha"]);
@@ -81,8 +81,8 @@ class DaoPessoa {
 
     function alterarPessoa($conn, $pessoa, $foto = null) {
         $pessoaId = $conn->real_escape_string($pessoa["pessoaId"]);
-        $nome = utf8_decode($conn->real_escape_string($pessoa["nome"]));
-        $sobrenome = utf8_decode($conn->real_escape_string($pessoa["sobrenome"]));
+        $nome = $conn->real_escape_string($pessoa["nome"]);
+        $sobrenome = $conn->real_escape_string($pessoa["sobrenome"]);
         $email = $conn->real_escape_string($pessoa["email"]);
         $usuario = $conn->real_escape_string($pessoa["usuario"]);
         $senha = $conn->real_escape_string($pessoa["senha"]);

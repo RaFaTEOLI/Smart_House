@@ -211,13 +211,13 @@
                                   if ($casa["estadoId"] == $estado["estadoId"]) {
                                   ?>
                                   <option value="<?php echo $estado["estadoId"] ?>" selected>
-                                      <?php echo utf8_encode($estado["nome"]) ?>
+                                      <?php echo $estado["nome"] ?>
                                   </option>
                                       <?php
                                   } else {
                                       ?>
                                   <option value="<?php echo $estado["estadoId"] ?>">
-                                      <?php echo utf8_encode($estado["nome"]) ?>
+                                      <?php echo $estado["nome"] ?>
                                   </option>
                                   <?php
                                   }
@@ -239,13 +239,13 @@
                                   if ($casa["proprietarioId"] == $pessoa["pessoaId"]) {
                                   ?>
                                   <option value="<?php echo $pessoa["pessoaId"] ?>" selected>
-                                      <?php echo utf8_encode($pessoa["nome"] . ' ' . $pessoa["sobrenome"]) ?>
+                                      <?php echo $pessoa["nome"] . ' ' . $pessoa["sobrenome"] ?>
                                   </option>
                                       <?php
                                   } else {
                                       ?>
                                   <option value="<?php echo $pessoa["pessoaId"] ?>">
-                                      <?php echo utf8_encode($pessoa["nome"] . ' ' . $pessoa["sobrenome"]) ?>
+                                      <?php echo $pessoa["nome"] . ' ' . $pessoa["sobrenome"] ?>
                                   </option>
                                   <?php
                                   }

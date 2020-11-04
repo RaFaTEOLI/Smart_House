@@ -117,8 +117,8 @@ if (isset($_GET["success"])) {
                   <tbody>
                     <?php while ($linha = mysqli_fetch_assoc($cenas)) { ?>
                       <tr>
-                        <td><?= utf8_encode($linha["nome"]) ?></td>
-                        <td><?= utf8_encode($linha["descricao"]) ?></td>
+                        <td><?= $linha["nome"] ?></td>
+                        <td><?= $linha["descricao"] ?></td>
                         <td><?= date("d/m/Y H:i:s", strtotime($linha["dataHora"])) ?></td>
                         <td align="center">
                           <div class="btn-group">

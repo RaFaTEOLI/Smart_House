@@ -141,13 +141,13 @@
                             if ($comodo["comodoId"] == $aparelho["comodoId"]) {
                             ?>
                             <option value="<?php echo $comodo["comodoId"] ?>" selected>
-                                <?= utf8_encode($comodo["comodoId"] . ' - ' . $comodo["nome"]) ?>
+                                <?= $comodo["comodoId"] . ' - ' . $comodo["nome"] ?>
                             </option>
                                 <?php
                             } else {
                                 ?>
                             <option value="<?php echo $comodo["comodoId"] ?>">
-                              <?= utf8_encode($comodo["comodoId"] . ' - ' . $comodo["nome"]) ?>
+                              <?= $comodo["comodoId"] . ' - ' . $comodo["nome"] ?>
                             </option>
                             <?php
                             }

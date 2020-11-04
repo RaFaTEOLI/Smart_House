@@ -124,7 +124,7 @@
                         <select class="form-control select2bs4" style="width: 100%;" name="pessoa">
                           <option value="">Selecione uma pessoa</option>
                           <?php while ($pessoa = mysqli_fetch_assoc($pessoas)) { ?>
-                          <option value="<?= $pessoa["pessoaId"] ?>"><?= utf8_encode($pessoa["nome"] . ' ' . $pessoa["sobrenome"]) ?></option>
+                          <option value="<?= $pessoa["pessoaId"] ?>"><?= $pessoa["nome"] . ' ' . $pessoa["sobrenome"] ?></option>
                           <?php } ?>
                         </select>
                       </div>

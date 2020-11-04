@@ -124,7 +124,7 @@
                     <td><?= $linha["nomePessoa"] . " " . $linha["sobrenomePessoa"] ?></td>
                     <td><?= date("d/m/Y H:i:s", strtotime($linha["dataHora"])) ?></td>
                     <td align="center"><?= stringToBadge($linha["acao"]) ?></td>
-                    <td class="d-none d-lg-block"><?= utf8_encode($linha["descricao"]) ?></td>
+                    <td class="d-none d-lg-block"><?= $linha["descricao"] ?></td>
                     <td><?= $linha["ip"] ?></td>
                   </tr>
                 <?php } ?>

@@ -112,9 +112,9 @@
                     <div class="small-box bg-info">
                       <div class="inner">
                         <a id="remover" href="excluir_morador.php?id=<?= $morador["moradorId"] ?>" style="position:absolute; right:5px;top:5px;" class="text-danger"><i class="fas fa-trash"></i></a>
-                        <h3><?= utf8_encode($morador["nome"]) ?></h3>
+                        <h3><?= $morador["nome"] ?></h3>
 
-                        <p><?= utf8_encode($morador["sobrenome"]) ?></p>
+                        <p><?= $morador["sobrenome"] ?></p>
                       </div>
                       <div class="icon">
                         <i class="ion"><img height="60" width="60" src="<?php echo $morador["foto"] ? $morador["foto"] : "/dist/img/avatar5.png" ?>" class="img-circle elevation-2" alt="User Image"></i>

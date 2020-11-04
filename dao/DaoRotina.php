@@ -98,7 +98,7 @@ class DaoRotina
     function salvarRotina($conn, $rotina)
     {
         $aparelhoId = $conn->real_escape_string($rotina["aparelhoId"]);
-        $descricao = utf8_decode($conn->real_escape_string($rotina["descricao"]));
+        $descricao = $conn->real_escape_string($rotina["descricao"]);
         $dataHora = $this->dateBRtoUSA($conn->real_escape_string($rotina["dataHora"]));
         $acao = $conn->real_escape_string($rotina["acao"]);
         $cenaId = $rotina["cenaId"];
@@ -139,7 +139,7 @@ class DaoRotina
     {
         $rotinaId = $conn->real_escape_string($rotina["rotinaId"]);
         $aparelhoId = $conn->real_escape_string($rotina["aparelhoId"]);
-        $descricao = utf8_decode($conn->real_escape_string($rotina["descricao"]));
+        $descricao = $conn->real_escape_string($rotina["descricao"]);
         $dataHora = $this->dateBRtoUSA($conn->real_escape_string($rotina["dataHora"]));
         $acao = $conn->real_escape_string($rotina["acao"]);
 

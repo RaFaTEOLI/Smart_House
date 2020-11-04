@@ -107,7 +107,7 @@ if (isset($_GET["success"])) {
                 ?>
                     <div class="card bg-warning" style="width: 100%; border-radius: 39px 39px 39px 39px;">
                       <div class="card-body">
-                        <h5 class="card-title"><?php echo utf8_encode($mensagem["mensagem"]) ?></h5>
+                        <h5 class="card-title"><?php echo $mensagem["mensagem"] ?></h5>
                         <p class="card-text">Data: <?php echo date("d/m/Y", strtotime($mensagem["dataMensagem"])) ?></p>
                         <a type="button" class="btn btn-outline-dark" href="/pages/mensagens/vizualizar_mensagem.php?id=<?php echo $mensagem["mensagemId"] ?>" class="card-link"><i class="fas fa-eye"></i> Marcar como lida</a>
                       </div>

@@ -61,7 +61,7 @@ class DaoAtivacao {
     function alterarAparelho($conn, $aparelho) {
         $aparelhoId = $conn->real_escape_string($aparelho["aparelhoId"]);
         $comodoId = $conn->real_escape_string($aparelho["comodo"]);
-        $nome = utf8_decode($conn->real_escape_string($aparelho["nome"]));
+        $nome = $conn->real_escape_string($aparelho["nome"]);
         $descricao = $conn->real_escape_string($aparelho["descricao"]);
 
         $salvarComodo = "UPDATE aparelho ";

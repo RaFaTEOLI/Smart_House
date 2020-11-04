@@ -50,7 +50,7 @@ class DaoComodo {
     }
 
     function salvarComodo($conn, $comodo) {
-        $nome = utf8_decode($conn->real_escape_string($comodo["nome"]));
+        $nome = $conn->real_escape_string($comodo["nome"]);
         $andar = $conn->real_escape_string($comodo["andar"]);
         $casaId = $conn->real_escape_string($comodo["casaId"]);
 
@@ -76,7 +76,7 @@ class DaoComodo {
 
     function alterarComodo($conn, $comodo) {
         $comodoId = $conn->real_escape_string($comodo["comodoId"]);
-        $nome = utf8_decode($conn->real_escape_string($comodo["nome"]));
+        $nome = $conn->real_escape_string($comodo["nome"]);
         $andar = $conn->real_escape_string($comodo["andar"]);
 
         $salvarComodo = "UPDATE comodo ";

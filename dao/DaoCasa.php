@@ -65,9 +65,9 @@ class DaoCasa {
     }
 
     function salvarCasa($conn, $casa, $foto) {
-        $nome = utf8_decode($conn->real_escape_string($casa["nome"]));
-        $endereco = utf8_decode($conn->real_escape_string($casa["endereco"]));
-        $cidade = utf8_decode($conn->real_escape_string($casa["cidade"]));
+        $nome = $conn->real_escape_string($casa["nome"]);
+        $endereco = $conn->real_escape_string($casa["endereco"]);
+        $cidade = $conn->real_escape_string($casa["cidade"]);
         $estado = $conn->real_escape_string($casa["estado"]);
         $cep = $conn->real_escape_string($casa["cep"]);
         $proprietario = $conn->real_escape_string($casa["proprietario"]);
@@ -94,9 +94,9 @@ class DaoCasa {
 
     function alterarCasa($conn, $casa, $foto = null) {
         $casaId = $conn->real_escape_string($casa["casaId"]);
-        $nome = utf8_decode($conn->real_escape_string($casa["nome"]));
-        $endereco = utf8_decode($conn->real_escape_string($casa["endereco"]));
-        $cidade = utf8_decode($conn->real_escape_string($casa["cidade"]));
+        $nome = $conn->real_escape_string($casa["nome"]);
+        $endereco = $conn->real_escape_string($casa["endereco"]);
+        $cidade = $conn->real_escape_string($casa["cidade"]);
         $estado = $conn->real_escape_string($casa["estado"]);
         $cep = $conn->real_escape_string($casa["cep"]);
         $proprietario = $conn->real_escape_string($casa["proprietario"]);

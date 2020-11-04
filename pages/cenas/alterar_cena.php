@@ -185,7 +185,7 @@ if (isset($_POST["nome"]) && isset($_POST["dataHora"]) && isset($_POST["descrica
                     <tbody>
                       <?php while ($rotina = mysqli_fetch_assoc($rotinas)) { ?>
                         <tr>
-                          <td><?= utf8_encode($rotina["nomeAparelho"]) ?></td>
+                          <td><?= $rotina["nomeAparelho"] ?></td>
                           <td><?= date("d/m/Y H:i:s", strtotime($rotina["dataHora"])) ?></td>
                           <td align="center"><?= $rotina["acao"] ? "<span class='badge badge-success'>Ligar</span>" : "<span class='badge badge-danger'>Desligar</span>"; ?></td>
                           <td class="d-none d-lg-block"><?= $rotina["descricao"] ?></td>

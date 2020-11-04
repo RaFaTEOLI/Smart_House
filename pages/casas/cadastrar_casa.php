@@ -186,7 +186,7 @@
                             <?php
                                 while($estado = mysqli_fetch_assoc($estados)) {
                             ?>
-                            <option value="<?php echo $estado["estadoId"] ?>"><?php echo utf8_encode($estado["nome"]) ?></option>
+                            <option value="<?php echo $estado["estadoId"] ?>"><?php echo $estado["nome"] ?></option>
                             <?php
                                 }
                             ?>
@@ -205,7 +205,7 @@
                             <?php
                                 while($pessoa = mysqli_fetch_assoc($pessoas)) {
                             ?>
-                            <option value="<?php echo $pessoa["pessoaId"] ?>"><?php echo utf8_encode($pessoa["nome"] . ' ' . $pessoa["sobrenome"]) ?></option>
+                            <option value="<?php echo $pessoa["pessoaId"] ?>"><?php echo $pessoa["nome"] . ' ' . $pessoa["sobrenome"] ?></option>
                             <?php
                                 }
                             ?>
