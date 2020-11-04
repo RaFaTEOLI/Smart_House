@@ -3,7 +3,7 @@
     $server = "smarthouse.cfwoqgakt7t7.us-east-2.rds.amazonaws.com";    
     $user = "smart_house";
     $password = "fIHad42gf";
-    $db = "smarthouse";
+    $db = "smart_house";
     $port = "3306";
 
     // Opens Connection
