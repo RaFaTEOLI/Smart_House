@@ -15,6 +15,10 @@
     }
 
     function testHouseSession() {
+        if (!isset($_SESSION["userId"])) {
+          header("Location: login.php");
+          exit;
+        }
         if (!isset($_SESSION["casaId"])) {
             header("Location: /pages/conectar/casas.php");
         }
