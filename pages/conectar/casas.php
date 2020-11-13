@@ -40,7 +40,7 @@
   <!-- Automatic element centering -->
   <div class="lockscreen-wrapper">
     <div class="lockscreen-logo">
-      <a href="../../index2.html"><b>Smart</b>House</a>
+      <a href="/"><b>Smart</b>House</a>
     </div>
     <!-- User name -->
     <div class="lockscreen-name">Acesse sua Casa</div>
